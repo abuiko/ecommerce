@@ -1,0 +1,13 @@
+{
+    "version": 3,
+    "mappings": "ACAA,AAAA,CAAC,CACD,CAAC,AAAA,QAAQ,CACT,CAAC,AAAA,OAAO,AAAC,CACL,OAAO,CAAE,CAAC,CACV,MAAM,CAAE,CAAC,CACT,UAAU,CAAE,UAAU,CACzB",
+    "sources": [
+        "../../sass/main.scss",
+        "../../sass/base/_global.scss",
+        "../../sass/components/_buttons.scss",
+        "../../sass/mixins/_mixins.scss",
+        "../../sass/layout/_header.scss"
+    ],
+    "names": [],
+    "file": "main.min.css"
+}
