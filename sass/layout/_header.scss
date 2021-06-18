@@ -1,0 +1,19 @@
+.nav {
+    .menu {
+        .close-nav {
+            display: none;
+        }
+    }
+
+    .navigation-mobile {
+        padding: 1.8rem 2rem;
+
+        .toggle {
+            flex: 2;
+        }
+
+        .icons-mobile {
+            flex: 1;
+        }
+    }
+}

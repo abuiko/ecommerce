@@ -1,2 +1,2 @@
-*,*::before,*::after{padding:0;margin:0;box-sizing:inherit}html{box-sizing:border-box;font-size:62.5%}
+*,*::before,*::after{padding:0;margin:0;box-sizing:inherit}html{box-sizing:border-box;font-size:62.5%}h1,h2,h3{font-weight:bold}ul{list-style:none}i{font-size:2.2rem;color:#505050;cursor:pointer}.flex{display:flex}.flex-jc-sb{justify-content:space-between}.flex-jc-c{justify-content:center}.flex-ai-c{align-items:center}@media (max-width: 64.0625rem){.hide-for-mobile{display:none}}@media (min-width: 64.0625rem){.hide-for-desktop{display:none}}.nav .menu .close-nav{display:none}.nav .navigation-mobile{padding:1.8rem 2rem}.nav .navigation-mobile .toggle{flex:2}.nav .navigation-mobile .icons-mobile{flex:1}
 /*# sourceMappingURL=main.min.css.map */
