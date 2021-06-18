@@ -1,0 +1,43 @@
+.btns-container {
+
+    .sort-btn p,
+    .filter-btn p {
+        font-size: 1.7rem;
+    }
+
+    i {
+        font-size: 1.5rem;
+        margin-left: 1.5rem;
+    }
+}
+
+.clothes {
+    margin: 0rem 1rem;
+    flex-wrap: wrap;
+    cursor: pointer;
+
+    .clothes-card {
+        width: 190px;
+        margin-top: 2rem;
+
+        .clothes-photo {
+            width: 100%;
+            object-fit: cover;
+        }
+
+        .clothes-info {
+            padding: 1.5rem 0.4rem;
+
+            p {
+                font-size: 1.6rem;
+                padding-bottom: 0.6rem;
+                padding-left: 0.5rem;
+            }
+
+            i {
+                font-size: 2.8rem;
+                padding-right: 0.5rem;
+            }
+        }
+    }
+}
