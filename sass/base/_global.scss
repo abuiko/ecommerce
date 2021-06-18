@@ -21,10 +21,23 @@ ul {
     list-style: none;
 }
 
+a {
+    text-decoration: none;
+    color: rgb(80, 80, 80);
+}
+
 i {
-    font-size: 2.2rem;
+    font-size: 2.4rem;
     color: rgb(80, 80, 80);
     cursor: pointer;
+}
+
+// container
+
+.container {
+    max-width: 1240px;
+    margin: auto;
+    padding: 2rem 2rem;
 }
 
 // flexbox classes

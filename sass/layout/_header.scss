@@ -1,8 +1,21 @@
 .nav {
+    // padding: 3rem 4rem;
+
+    h1 {
+        font-size: 3.2rem;
+        color: rgb(80, 80, 80);
+    }
+
     .menu {
+
         .close-nav {
             display: none;
         }
+
+        .nav-links {
+            width: 500px;
+        }
+
     }
 
     .navigation-mobile {
