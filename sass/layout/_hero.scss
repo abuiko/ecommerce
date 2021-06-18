@@ -1,3 +1,37 @@
+#clothes-container {
+    position: relative;
+}
+
+.filter-toggle,
+.sort-toggle {
+    display: none;
+    position: absolute;
+    width: 190px;
+    background: #fff;
+
+    li {
+        padding: 1.5rem;
+        font-size: 1.6rem;
+        cursor: pointer;
+    }
+}
+
+.filter-toggle {
+    top: 60px;
+    right: 1rem;
+    text-align: right;
+}
+
+.sort-toggle {
+    top: 60px;
+    left: 1rem;
+}
+
+.filter-toggle.open,
+.sort-toggle.open {
+    display: block;
+}
+
 .btns-container {
 
     .sort-btn p,
@@ -15,6 +49,7 @@
     margin: 0rem 1rem;
     flex-wrap: wrap;
     cursor: pointer;
+
 
     .clothes-card {
         width: 190px;

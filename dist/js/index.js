@@ -1,14 +1,3 @@
-// AD BANNER
-
-const banner = document.getElementById("banner");
-
-const bannerDiv = document.createElement("div");
-bannerDiv.classList.add("banner", "container", "flex", "flex-jc-c", "flex-ai-c");
-const bannerAd = document.createElement("h2");
-bannerAd.innerText = "Summer Sale: Up to 50% off online & in stores";
-bannerDiv.appendChild(bannerAd);
-banner.appendChild(bannerDiv);
-
 // Clothes Display
 
 const clothes = [
@@ -67,14 +56,78 @@ const clothes = [
         price: 15.99,
         img: "/dist/img/pants.jpeg",
         type: 'bottom',
-    }
+    },
+    {
+        id: 9,
+        name: "Pants",
+        price: 15.99,
+        img: "/dist/img/pants2.jpeg",
+        type: 'bottom',
+    },
+    {
+        id: 10,
+        name: "Shorts",
+        price: 15.99,
+        img: "/dist/img/shorts.jpeg",
+        type: 'bottom',
+    },
+    {
+        id: 11,
+        name: "Sweatshirt",
+        price: 15.99,
+        img: "/dist/img/sweatshirt.jpeg",
+        type: 'top',
+    },
+    {
+        id: 12,
+        name: "Sweatshirt",
+        price: 15.99,
+        img: "/dist/img/sweatshirt2.jpeg",
+        type: 'top',
+    },
+    {
+        id: 13,
+        name: "Top",
+        price: 15.99,
+        img: "/dist/img/top.jpeg",
+        type: 'top',
+    },
+    {
+        id: 14,
+        name: "Top",
+        price: 15.99,
+        img: "/dist/img/top2.jpeg",
+        type: 'top',
+    },
+    {
+        id: 14,
+        name: "Top",
+        price: 15.99,
+        img: "/dist/img/top3.jpeg",
+        type: 'top',
+    },
+    {
+        id: 15,
+        name: "Top",
+        price: 15.99,
+        img: "/dist/img/top5.jpeg",
+        type: 'top',
+    },
+    {
+        id: 16,
+        name: "Top",
+        price: 15.99,
+        img: "/dist/img/vest.jpeg",
+        type: 'top',
+    },
 ]
 
 const clothesContainer = document.querySelector(".clothes");
+const filterBtns = document.querySelectorAll(".filter");
 
 window.addEventListener("DOMContentLoaded", () => {
     displayClothes(clothes);
-    // filterClothes();
+    filterClothes(clothes);
 })
 
 function displayClothes(items) {
@@ -93,4 +146,37 @@ function displayClothes(items) {
     })
     displayClothes.join('');
     clothesContainer.innerHTML = displayClothes;
+}
+
+// SORT / FILTER TOGGLE
+
+const sortBtn = document.querySelector(".sort-btn");
+sortBtn.addEventListener("click", () => {
+    const sortToggle = document.querySelector(".sort-toggle");
+    sortToggle.classList.toggle("open");
+})
+
+const filterBtn = document.querySelector(".filter-btn");
+filterBtn.addEventListener("click", () => {
+    const filterToggle = document.querySelector(".filter-toggle");
+    filterToggle.classList.toggle("open");
+})
+
+
+function filterClothes(items) {
+
+    filterBtns.forEach(btn => btn.addEventListener("click", () => {
+        if (btn.innerText === "Tops") {
+            let result = items.filter(item => item.type === "top");
+            displayClothes(result);
+        } else if (btn.innerText === "Bottoms") {
+            let result = items.filter(item => item.type === "bottom");
+            displayClothes(result);
+        } else if (btn.innerText === "Dresses") {
+            let result = items.filter(item => item.type === "dress");
+            displayClothes(result);
+        } else {
+            displayClothes(clothes);
+        }
+    }))
 }
