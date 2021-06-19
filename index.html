@@ -22,28 +22,21 @@
 <body>
     <header>
         <nav class="nav container">
-            <div class="navigation flex flex-ai-c flex-jc-sb">
-                <div class="logo hide-for-mobile">
+            <div class="navigation flex flex-ai-c flex-jc-sb  hide-for-mobile">
+                <div class="logo">
                     <h1>Logo</h1>
                 </div>
-                <div class="menu">
-                    <div class="close-nav">
-                        <div class="logo">
-                            <h1>Logo</h1>
-                        </div>
-                        <div class="close">
-                            <i class="fas fa-times"></i>
-                        </div>
-                    </div>
-                    <ul class="nav-links hide-for-mobile flex flex-ai-c flex-jc-sb">
-                        <li class="nav-item"><a href="#" class="nav-link">About</a></li>
-                        <li class="nav-item"><a href="#" class="nav-link">Contact</a></li>
-                        
-                        <li class="nav-item"><a href="#" class="nav-link icon"><i class="fas fa-user-alt"></i></a></li>
-                        <li class="nav-item"><a href="#" class="nav-link icon"><i class="fas fa-heart"></i></a></li>
-                        <li class="nav-item"><a href="#" class="nav-link icon"><i class="fas fa-shopping-bag"></i></a></li>     
-                    </ul>
-                </div>
+                
+                <form>
+                    <input type="text" name="search">
+                    
+                </form>
+                <ul class="nav-links hide-for-mobile flex flex-ai-c flex-jc-sb">
+                    <li class="nav-item"><a href="#" class="nav-link icon"><i class="fas fa-user-alt"></i></a></li>
+                    <li class="nav-item"><a href="#" class="nav-link icon"><i class="fas fa-heart"></i></a></li>
+                    <li class="nav-item"><a href="#" class="nav-link icon"><i class="fas fa-shopping-bag"></i></a></li>
+                </ul>
+
             </div>
             <div class="navigation-mobile flex flex-ai-c flex-jc-sb hide-for-desktop">
                 <div id="toggle" class="toggle">
@@ -57,12 +50,12 @@
             </div>
         </nav>
     </header>
-    <section id="banner">
-        <div class="banner flex flex-ai-c flex-jc-c container">
+    <section id="banner" class="container">
+        <div class="banner flex flex-ai-c flex-jc-c">
             <h2>Summer Sale: Up to 50% off online & in stores</h2>
         </div>
     </section>
-    <section id="clothes-container">
+    <section id="clothes-container" class="container">
         <ul class="filter-toggle">
             <li class="filter">All</li>
             <li class="filter">Tops</li>
@@ -73,20 +66,20 @@
             <li class="sort">Trending</li>
             <li class="sort">From Low to High</li>
             <li class="sort">From High to Low</li>
-            
+
         </ul>
-        <div class="btns-container flex flex-ai-c flex-jc-sb container">
+        <div class="btns-container flex flex-ai-c flex-jc-sb">
             <div class="sort-btn flex flex-ai-c">
                 <p>Sort</p>
                 <i class="fas fa-chevron-down"></i>
             </div>
             <div class="filter-btn flex flex-ai-c">
-                
+
                 <p>Filter</p>
                 <i class="fas fa-chevron-down"></i>
             </div>
         </div>
-        <div class="clothes flex flex-jc-sb">      
+        <div class="clothes flex flex-jc-sb">
         </div>
     </section>
 

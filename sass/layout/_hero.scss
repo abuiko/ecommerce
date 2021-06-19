@@ -1,5 +1,6 @@
 #clothes-container {
     position: relative;
+
 }
 
 .filter-toggle,
@@ -46,14 +47,24 @@
 }
 
 .clothes {
+    position: absolute;
     margin: 0rem 1rem;
     flex-wrap: wrap;
     cursor: pointer;
+
+    @include breakpoint-up(large) {
+        margin: 0rem;
+    }
 
 
     .clothes-card {
         width: 190px;
         margin-top: 2rem;
+
+
+        @include breakpoint-up(large) {
+            width: 250px;
+        }
 
         .clothes-photo {
             width: 100%;
