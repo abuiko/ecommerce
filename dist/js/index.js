@@ -171,6 +171,7 @@ window.addEventListener("DOMContentLoaded", () => {
 })
 
 // containers
+const body = document.querySelector("body");
 const clothesContainer = document.querySelector(".clothes");
 const clothesDetails = document.querySelector(".clothes-details");
 
@@ -225,6 +226,7 @@ function displayClothes(items) {
     const clothesCards = document.querySelectorAll(".clothes-card");
     clothesCards.forEach(card => card.addEventListener('click', (e) => {
         clothesDetails.classList.add('open');
+        body.classList.add("no-scroll")
     }))
     addToFavorites();
 }
