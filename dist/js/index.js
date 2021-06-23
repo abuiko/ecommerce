@@ -223,15 +223,43 @@ function displayClothes(items) {
     displayClothes.join('');
     clothesContainer.innerHTML = displayClothes;
 
-    const clothesCards = document.querySelectorAll(".clothes-card");
-    clothesCards.forEach(card => card.addEventListener('click', (e) => {
-        clothesDetails.classList.add('open');
-        body.classList.add("no-scroll")
-    }))
+    // const clothesCards = document.querySelectorAll(".clothes-card");
+    // clothesCards.forEach(card => card.addEventListener('click', (e) => {
+    //     clothesDetails.classList.add('open');
+    //     clothesDetails.innerHTML = `<div class="cross-icon">
+    //     <i class="fas fa-times"></i>
+    // </div>
+    // <div class="details-container container">
+    //     <div class="details-photo">
+    //         <img src="/dist/img/hoodie.jpeg" alt="">
+    //     </div>
+    //     <div class="details-desc">
+    //         <h2>Title</h2>
+    //         <h3>Description</h3>
+    //         <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Architecto odio voluptates corrupti.
+    //             Exercitationem libero aspernatur aliquid nisi iste corporis quis!</p>
+    //         <label for="size">Size:</label>
+
+    //         <select id="size">
+    //             <option value="volvo">Select Size</option>
+    //             <option value="zero">0</option>
+    //             <option value="two">2</option>
+    //             <option value="four">4</option>
+    //             <option value="six">6</option>
+    //         </select>
+    //         <label for="quantity">Quantity:</label>
+    //         <input type="number" id="quantity" name="quantity" value="1" min="1" max="5">
+    //         <button type="submit">Add To Cart</button>
+    //     </div>
+    // </div>`;
+    //     body.classList.add("no-scroll");
+    // }))
     addToFavorites();
 }
 
+function openQuickDetails() {
 
+}
 function addToFavorites() {
     const heartIcons = document.querySelectorAll(".clothes-icon i");
     heartIcons.forEach(icon => icon.addEventListener('click', (e) => {
