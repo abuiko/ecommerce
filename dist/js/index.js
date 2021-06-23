@@ -138,14 +138,48 @@ const clothes = [
         type: 'top',
         stars: 5,
     },
-]
+    {
+        id: 18,
+        name: "Pleated Skirt",
+        price: 13.99,
+        img: "/dist/img/skirt.jpeg",
+        type: 'bottom',
+        stars: 4.6,
+    },
+    {
+        id: 19,
+        name: "Cropped Sweatshirt",
+        price: 23.99,
+        img: "/dist/img/sweatshirt3.jpeg",
+        type: 'top',
+        stars: 4.9,
+    },
+    {
+        id: 20,
+        name: "Bodysuit",
+        price: 23.99,
+        img: "/dist/img/bodysuit.jpeg",
+        type: 'top',
+        stars: 4.1,
+    },
 
+]
+window.addEventListener("DOMContentLoaded", () => {
+    displayClothes(clothes);
+    filterClothes(clothes);
+    sortClothes(clothes);
+})
+
+// containers
 const clothesContainer = document.querySelector(".clothes");
+const clothesDetails = document.querySelector(".clothes-details");
+
+// Buttons
 const filterBtns = document.querySelectorAll(".filter");
 const sortBtns = document.querySelectorAll(".sort");
 
-// SORT / FILTER TOGGLE
 
+// SORT / FILTER TOGGLE
 const sortBtn = document.querySelector(".sort-btn");
 sortBtn.addEventListener("click", () => {
 
@@ -167,15 +201,13 @@ filterBtn.addEventListener("click", () => {
     filterIcon.classList.toggle("fa-chevron-up");
 })
 
-window.addEventListener("DOMContentLoaded", () => {
-    displayClothes(clothes);
-    filterClothes(clothes);
-    sortClothes(clothes);
-})
 
 function displayClothes(items) {
     let displayClothes = items.map(item => {
         return `<div class="clothes-card">
+        <div class="overlay">
+        <div class="details-btn"><a href="#">View</a></div>
+        </div>
         <img class="clothes-photo" src=${item.img} alt=${item.name}>
         <div class="clothes-info flex flex-jc-sb">
         <div class="clothes-text">
@@ -190,9 +222,13 @@ function displayClothes(items) {
     displayClothes.join('');
     clothesContainer.innerHTML = displayClothes;
 
+    const clothesCards = document.querySelectorAll(".clothes-card");
+    clothesCards.forEach(card => card.addEventListener('click', (e) => {
+        clothesDetails.classList.add('open');
+    }))
     addToFavorites();
-
 }
+
 
 function addToFavorites() {
     const heartIcons = document.querySelectorAll(".clothes-icon i");
