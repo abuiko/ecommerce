@@ -8,6 +8,7 @@ const clothes = [
         img: "/dist/img/dress.jpeg",
         type: 'dress',
         stars: 5,
+
     },
     {
         id: 2,
@@ -197,8 +198,18 @@ function displayClothes(items) {
     })
     displayClothes.join('');
     clothesContainer.innerHTML = displayClothes;
+
+    addToFavorites();
+
 }
 
+function addToFavorites() {
+    const heartIcons = document.querySelectorAll(".clothes-icon i");
+    heartIcons.forEach(icon => icon.addEventListener('click', (e) => {
+        e.target.classList.toggle("far");
+        e.target.classList.toggle("fas");
+    }))
+}
 function filterClothes(items) {
 
     filterBtns.forEach(btn => btn.addEventListener("click", () => {
@@ -233,3 +244,6 @@ function sortClothes(items) {
         }
     }))
 }
+
+
+

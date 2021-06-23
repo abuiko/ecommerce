@@ -20,13 +20,13 @@
 }
 
 .filter-toggle {
-    top: 60px;
+    top: 50px;
     right: 1rem;
     text-align: right;
 }
 
 .sort-toggle {
-    top: 60px;
+    top: 50px;
     left: 1rem;
 }
 
@@ -75,6 +75,10 @@
             p {
                 font-size: 1.6rem;
             }
+        }
+
+        .fas.fa-heart {
+            color: rgb(201, 0, 46);
         }
     }
 }
