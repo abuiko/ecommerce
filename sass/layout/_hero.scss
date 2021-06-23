@@ -58,21 +58,20 @@
     justify-content: flex-start;
 
     .clothes-card {
-        position: relative;
+
         cursor: pointer;
         width: 48%;
         flex: 1 0 43%;
         margin: 1rem;
-
 
         &:hover {
             .overlay {
                 display: flex;
                 justify-content: center;
                 align-items: center;
+
             }
         }
-
 
         @include breakpoint-up(medium) {
             width: 30%;
@@ -84,13 +83,25 @@
             flex: 1 0 20%;
         }
 
+        .photo-wrapper {
+            position: relative;
+        }
+
         .clothes-photo {
             width: 100%;
             object-fit: cover;
+
+
         }
 
         .clothes-info {
-            padding: 1rem 0.6rem 0rem;
+            padding: 1rem 2rem 1rem;
+
+            i {
+                @include breakpoint-up(large) {
+                    fnt-size: 5rem;
+                }
+            }
         }
 
         .clothes-text {

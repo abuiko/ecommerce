@@ -206,10 +206,14 @@ filterBtn.addEventListener("click", () => {
 function displayClothes(items) {
     let displayClothes = items.map(item => {
         return `<div class="clothes-card">
+        
+        <div class="photo-wrapper">
+        <img class="clothes-photo" src=${item.img} alt=${item.name}>
         <div class="overlay">
         <div class="details-btn"><a href="#">View</a></div>
         </div>
-        <img class="clothes-photo" src=${item.img} alt=${item.name}>
+        </div>
+        
         <div class="clothes-info flex flex-jc-sb">
         <div class="clothes-text">
         <p id="type">${item.name}</p>
@@ -257,9 +261,7 @@ function displayClothes(items) {
     addToFavorites();
 }
 
-function openQuickDetails() {
 
-}
 function addToFavorites() {
     const heartIcons = document.querySelectorAll(".clothes-icon i");
     heartIcons.forEach(icon => icon.addEventListener('click', (e) => {
