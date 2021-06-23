@@ -149,12 +149,14 @@ const sortBtns = document.querySelectorAll(".sort");
 
 const sortBtn = document.querySelector(".sort-btn");
 sortBtn.addEventListener("click", () => {
+
     const sortToggle = document.querySelector(".sort-toggle");
     sortToggle.classList.toggle("open");
 })
 
 const filterBtn = document.querySelector(".filter-btn");
 filterBtn.addEventListener("click", () => {
+
     const filterToggle = document.querySelector(".filter-toggle");
     filterToggle.classList.toggle("open");
 })

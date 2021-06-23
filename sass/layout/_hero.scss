@@ -1,6 +1,7 @@
 #clothes-container {
     position: relative;
-
+    max-width: 1240px;
+    margin: auto;
 }
 
 .filter-toggle,
@@ -9,6 +10,7 @@
     position: absolute;
     width: 190px;
     background: #fff;
+    // padding: 1rem;
 
     li {
         padding: 1.5rem;
@@ -31,9 +33,11 @@
 .filter-toggle.open,
 .sort-toggle.open {
     display: block;
+    z-index: 99;
 }
 
 .btns-container {
+    padding: 1rem 2rem;
 
     .sort-btn p,
     .filter-btn p {
@@ -47,24 +51,16 @@
 }
 
 .clothes {
-    position: absolute;
-    margin: 0rem 1rem;
+    // padding: 1rem;
+    width: 100%;
+    display: flex;
     flex-wrap: wrap;
-    cursor: pointer;
-
-    @include breakpoint-up(large) {
-        margin: 0rem;
-    }
-
+    justify-content: space-evenly;
 
     .clothes-card {
-        width: 190px;
-        margin-top: 2rem;
-
-
-        @include breakpoint-up(large) {
-            width: 250px;
-        }
+        width: 48%;
+        flex: 1 0 33%;
+        margin: 1rem;
 
         .clothes-photo {
             width: 100%;
@@ -72,18 +68,14 @@
         }
 
         .clothes-info {
-            padding: 1.5rem 0.4rem;
+            padding: 1rem 0.6rem 0rem;
+        }
+
+        .clothes-text {
+
 
             p {
                 font-size: 1.6rem;
-                padding-bottom: 0.6rem;
-                padding-left: 0.5rem;
-            }
-
-            i {
-                font-size: 2.8rem;
-                padding-right: 0.5rem;
-                cursor: pointer;
             }
         }
     }
