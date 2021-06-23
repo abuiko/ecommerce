@@ -150,30 +150,21 @@ const sortBtn = document.querySelector(".sort-btn");
 sortBtn.addEventListener("click", () => {
 
     const sortToggle = document.querySelector(".sort-toggle");
-    sortToggle.classList.toggle("open");
-    if (sortToggle.classList.contains("open")) {
-        sortBtn.children[1].classList.remove("fa-chevron-down");
-        sortBtn.children[1].classList.add("fa-chevron-up");
-    } else {
-        sortBtn.children[1].classList.add("fa-chevron-down");
-        sortBtn.children[1].classList.remove("fa-chevron-up");
-    }
+    const sortIcon = sortBtn.children[1];
 
+    sortToggle.classList.toggle("open");
+    sortIcon.classList.toggle("fa-chevron-down");
+    sortIcon.classList.toggle("fa-chevron-up");
 })
 
 const filterBtn = document.querySelector(".filter-btn");
 filterBtn.addEventListener("click", () => {
     const filterToggle = document.querySelector(".filter-toggle");
+    const filterIcon = filterBtn.children[1];
+
     filterToggle.classList.toggle("open");
-    if (filterToggle.classList.contains("open")) {
-        filterBtn.children[1].classList.remove("fa-chevron-down");
-        filterBtn.children[1].classList.add("fa-chevron-up");
-    } else {
-        filterBtn.children[1].classList.add("fa-chevron-down");
-        filterBtn.children[1].classList.remove("fa-chevron-up");
-    }
-
-
+    filterIcon.classList.toggle("fa-chevron-down");
+    filterIcon.classList.toggle("fa-chevron-up");
 })
 
 window.addEventListener("DOMContentLoaded", () => {
