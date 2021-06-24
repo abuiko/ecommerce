@@ -1,0 +1,39 @@
+#favorites {
+    min-height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .favorites-container {
+        text-align: center;
+        width: 90%;
+        margin: auto;
+
+        h1,
+        h2,
+        p {
+            margin-bottom: 2rem;
+        }
+
+        h1 {
+            font-size: 2rem;
+        }
+
+        h2 {
+            font-size: 1.3rem;
+            font-weight: normal;
+        }
+
+        .browse-btn {
+            background: #000;
+            width: 20%;
+            margin: auto;
+            padding: 0.6rem 1rem;
+            border-radius: 5px;
+
+            a {
+                color: #fff;
+            }
+        }
+    }
+}
