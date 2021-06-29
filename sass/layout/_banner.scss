@@ -13,8 +13,9 @@
     padding: 0rem;
 
     @include breakpoint-up(large) {
-        height: 100px;
+        height: 150px;
         margin: 2rem 0rem;
+
     }
 
 
@@ -24,5 +25,9 @@
         padding: 0rem 2rem;
         color: #fff;
         line-height: 4.4rem;
+
+        @include breakpoint-up(large) {
+            font-size: 3.6rem;
+        }
     }
 }
