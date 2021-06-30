@@ -24,15 +24,24 @@
 }
 
 .filter-toggle {
-    top: 50px;
+    top: 40px;
     right: 1rem;
     text-align: right;
+
+    @include breakpoint-up(large) {
+        top: 80px;
+    }
 }
 
 .sort-toggle {
-    top: 50px;
+    top: 40px;
     left: 1rem;
+
+    @include breakpoint-up(large) {
+        top: 80px;
+    }
 }
+
 
 .filter-toggle.open,
 .sort-toggle.open {
