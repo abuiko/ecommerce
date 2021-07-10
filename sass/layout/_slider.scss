@@ -1,14 +1,24 @@
 .slider {
-    width: 800px;
-    height: 500px;
+    width: 400px;
+    height: 200px;
+
+    @include breakpoint-up(medium) {
+        width: 800px;
+        height: 500px;
+    }
+
     border-radius: 10px;
     overflow: hidden;
 
 
     .slides {
         width: 500%;
-        height: 500px;
+        height: 200px;
         display: flex;
+
+        @include breakpoint-up(medium) {
+            height: 500px;
+        }
 
         input {
             display: none;
@@ -19,8 +29,13 @@
             transition: 2s;
 
             img {
-                width: 800px;
-                height: 500px;
+                width: 400px;
+                height: 200px;
+
+                @include breakpoint-up(medium) {
+                    width: 800px;
+                    height: 500px;
+                }
             }
         }
     }
@@ -31,10 +46,14 @@
 
     .navigation-manual {
         position: absolute;
-        width: 800px;
+        width: 400px;
         margin-top: -40px;
         display: flex;
         justify-content: center;
+
+        @include breakpoint-up(medium) {
+            width: 800px;
+        }
 
         .manual-btn {
             border: 2px solid rgb(255, 255, 255);
