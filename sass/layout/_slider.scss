@@ -7,7 +7,12 @@
         height: 500px;
     }
 
-    border-radius: 10px;
+    @include breakpoint-up(large) {
+        width: 1230px;
+        height: 700px;
+    }
+
+    // border-radius: 10px;
     overflow: hidden;
 
 
@@ -20,6 +25,12 @@
             height: 500px;
         }
 
+        @include breakpoint-up(large) {
+
+            height: 700px;
+        }
+
+
         input {
             display: none;
         }
@@ -28,7 +39,13 @@
             width: 20%;
             transition: 2s;
 
-            img {
+            // img {
+            //     
+
+            // }
+            .slider-image {
+
+
                 width: 400px;
                 height: 200px;
 
@@ -36,6 +53,38 @@
                     width: 800px;
                     height: 500px;
                 }
+
+                @include breakpoint-up(large) {
+                    width: 1230px;
+                    height: 600px;
+                }
+
+
+            }
+
+            .img1 {
+                background-image: url("/dist/img/slide1.jpg");
+            }
+
+            .img2 {
+                background-image: url("/dist/img/slide2.jpg");
+            }
+
+            .img3 {
+                background-image: url("/dist/img/slide3.jpg");
+            }
+
+            .img4 {
+                background-image: url("/dist/img/slide4.jpg");
+            }
+
+            .img1,
+            .img2,
+            .img3,
+            .img4 {
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
             }
         }
     }
@@ -54,6 +103,12 @@
         @include breakpoint-up(medium) {
             width: 800px;
         }
+
+        @include breakpoint-up(large) {
+            width: 1230px;
+            margin-top: -180px;
+        }
+
 
         .manual-btn {
             border: 2px solid rgb(255, 255, 255);
@@ -97,9 +152,20 @@
     .navigation-auto {
         position: absolute;
         display: flex;
-        width: 800px;
+        width: 400px;
         justify-content: center;
         margin-top: 460px;
+
+        @include breakpoint-up(medium) {
+            width: 800px;
+
+        }
+
+        @include breakpoint-up(large) {
+            width: 1230px;
+            margin-top: 520px;
+
+        }
 
         div {
             border: 2px solid rgb(255, 255, 255);

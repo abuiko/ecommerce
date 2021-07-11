@@ -170,16 +170,14 @@ window.addEventListener("DOMContentLoaded", () => {
     filterClothes(clothes);
     sortClothes(clothes);
 
-
-
     // CAROUSEL
     let counter = 1;
     setInterval(function () {
         document.getElementById('radio' + counter).checked = true;
         counter++;
-        // if (counter > 4) {
-        //     counter=1;
-        // }
+        if (counter > 4) {
+            counter = 1;
+        }
     }, 8000);
 })
 
@@ -273,7 +271,6 @@ function displayClothes(items) {
     }))
     addToFavorites();
 }
-
 
 function addToFavorites() {
     const heartIcons = document.querySelectorAll(".clothes-icon i");
